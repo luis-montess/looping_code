@@ -1,0 +1,31 @@
+<!DOCTYPE html
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Launch Countdown</title>
+</head>
+<body>
+    <h2>Live output</h2>
+    <div class="output"></div>
+    <script>
+        const output = document.querySelector (".output");
+        let i = 10;
+        while (i >= 0) {
+            const para = document.createElement ("p");
+            output.appendChild (para);
+            if (i > 0){
+                if (i < 10){
+                    para.textContent = i;
+                } else {
+                    para.textContent = "Countdown 10";
+                }
+            } else {
+                para.textContent = "Blast off";
+            }
+        i--;
+        } 
+    </script>
+</body>
+</html>
