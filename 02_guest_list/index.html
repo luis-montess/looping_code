@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filling in a guest list</title>
+</head>
+<body>
+    <h2>Live output</h2>
+    <p class="admited">Admit:</p>
+    <p class="refused">Refuse:</p>
+    <script>
+        const people = ["Chris", "Anne", "Colin", "Terri", "Phil", "Lola", "Sam", "Kay", "Bruce"];
+        const admited = document.querySelector (".admited");
+        const refused = document.querySelector (".refused");
+        let text1, text2;
+        for (let i = 0; i < people.length; i++) {
+            if (people[i] === "Phil" || people[i] === "Lola"){
+                text1 += `${people[i]}, `;    
+            } else {
+                text2 += `${people[i]}, `;
+            }
+        }
+        refused.textContent = text1.slice (0, text1.length - 2) + ".";
+        admited.textContent = text2.slice (0, text2.length - 2) + ".";
+    </script>
+</body>
+</html>
