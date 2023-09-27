@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering message</title>
+</head>
+<body>
+    <p class="output">
+        <ul></ul>
+    </p>
+    <script>
+        const list = document.querySelector (".output ~ ul");
+        const greetings = ["Happy Birthday!", "A happy Christmas my love", "You/re all I want for Christmas", "Get well soon"];
+        list.innerHTML = "";
+        for (const greeting of greetings) {
+            if (greeting.includes("Christmas")){
+                const listItem = document.createElement ("li");
+                const textList = document.createTextNode (greeting);
+                listItem.appendChild (textList);   
+                list.appendChild (listItem);
+            }
+        } 
+    </script>   
+</body>
+</html>
